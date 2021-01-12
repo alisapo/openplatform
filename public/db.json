@@ -1,0 +1,60 @@
+{
+    "products": [{
+        "books": [
+            {
+                "id": 0,
+                "title": "",
+                "author": "",
+                "genre": "",
+                "price": 1,
+                "description": ""
+            }
+        ]},
+        {"music": [
+            {
+                "id": 0,
+                "title": "",
+                "artist": "",
+                "genre": "",
+                "label": "",
+                "price": 1,
+                "description": ""
+            }
+        ]},
+        {"movies": [
+            {
+                "id": 0,
+                "title": "",
+                "genre": "",
+                "regisseur": "",
+                "price": 1,
+                "studio": "",
+                "description": ""
+            }
+        ]
+    }],
+
+    "genres": [
+        {"books": [
+            "nonfiction",
+            "poerty",
+            "biography"
+        ]},
+        {"music": [
+            "pop",
+            "jazz",
+            "techno"
+        ]},
+        {"movies": [
+            "fantasy",
+            "comedy",
+            "action"
+        ]}
+    ],
+
+    "types": [
+        "books",
+        "movies",
+        "music"
+    ]
+    }
