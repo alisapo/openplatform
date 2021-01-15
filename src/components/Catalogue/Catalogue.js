@@ -89,30 +89,26 @@ class Catalogue extends React.Component {
       <div className="d-flex flex-column">
         <div className="d-flex flex-row align-items-center">
           <div className="d-flex flex-row">
-            {
-              types.map((type) => 
-                <Link
-                  className="text-decoration-none p-4"
-                  to={`/${type}`}
-                  onClick={(e) => this.handleType(type)}
-                  key={type}
-                >
-                  {getCategory(type)}
-                </Link>
-              )
-            }
+            {types.map((type) => 
+              <Link
+                className="text-decoration-none p-4"
+                to={`/${type}`}
+                onClick={(e) => this.handleType(type)}
+                key={type}
+              >
+                {getCategory(type)}
+              </Link>
+             )}
             </div>
             <div className="d-flex flex-row">
-              {
-                genres.map((genre) =>
-                  <div
-                    className="btn btn-primary m-2"
-                    onClick={this.handleGenre}
-                  >
-                    {genre}
-                  </div>
-                )
-              }
+              {genres.map((genre) =>
+                <div
+                  className="btn btn-primary m-2"
+                  onClick={this.handleGenre}
+                >
+                  {genre}
+                </div>
+               )}
             </div>
             <div
               name='reset'
@@ -127,20 +123,17 @@ class Catalogue extends React.Component {
           fillData={this.fillData}
         />
         <div className="row row-cols-1 row-cols-md-2">
-          {
-            !this.state.items ? (
-              <div>Loading...</div>
-                ) : (
-                  items.map((item) =>
-                    <Link
-                      className="text-decoration-none"
-                      to={`/${this.props.match.params.type}/product=${item.id}`}
-                    >
-                      <ItemCard key={item.id} {...item} />
-                    </Link>
-                  )
-                )
-          }
+          {!this.state.items ? (
+            <div>Loading...</div>
+              ) : (
+                items.map((item) =>
+                  <Link
+                    className="text-decoration-none"
+                    to={`/${this.props.match.params.type}/product=${item.id}`}
+                  >
+                    <ItemCard key={item.id} {...item} />
+                  </Link>
+              ))}
         </div>
       </div>
     );
